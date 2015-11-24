@@ -110,7 +110,7 @@ public class DefaultQueueWorker<T extends Queuable> implements QueueWorker<T>{
 		scanner.addIncludeFilter(new AnnotationTypeFilter(QueueHandle.class));
 
 		for (BeanDefinition bd : scanner
-				.findCandidateComponents("com.phonewarrior")) {
+				.findCandidateComponents("<your-package-to-scan>")) {
 			try {
 				if (!QueueHandler.class.isAssignableFrom(Class.forName(bd
 						.getBeanClassName()))) {
