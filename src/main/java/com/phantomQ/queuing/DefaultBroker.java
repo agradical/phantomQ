@@ -61,7 +61,7 @@ public class DefaultBroker implements Broker {
 		scanner.addIncludeFilter(new AnnotationTypeFilter(QueueConfig.class));
 
 		for (BeanDefinition bd : scanner
-				.findCandidateComponents("com.phonewarrior")) {
+				.findCandidateComponents("<your-package-to-scan>")) {
 			try {
 				if (!Queuable.class.isAssignableFrom(Class.forName(bd
 						.getBeanClassName()))) {
