@@ -24,7 +24,7 @@ public class DefaultBrokerTest{
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		context = new ClassPathXmlApplicationContext(new String[] {
-				"classpath*:applicationContext-dao.xml" });
+				"classpath*:applicationContext-test.xml" });
 		broker = context.getBean(DefaultBroker.class);
 		//test =  context.getBean(Testclass.class);
 	}
